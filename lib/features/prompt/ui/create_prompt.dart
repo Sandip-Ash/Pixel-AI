@@ -17,9 +17,10 @@ class CreatePromptScreen extends StatefulWidget {
 class _CreatePromptScreenState extends State<CreatePromptScreen> {
 
   TextEditingController controller = TextEditingController();
-  String stability_ApiKey = 'sk-hWHoLrLE7LCGmgLPozIGd5xDFz2GMakctV7Pp0vn73iBSRBo';
+  // String stability_ApiKey = 'sk-hWHoLrLE7LCGmgLPozIGd5xDFz2GMakctV7Pp0vn73iBSRBo';
+  String stability_ApiKey = 'sk-0d2w6R5g8DzRxqV5ljkDUZCDy2Q2h6ibefCYBH2D6FeRVLdd';
   final StabilityAI _ai = StabilityAI();
-  final ImageAIStyle imageAIStyle = ImageAIStyle.cartoon;
+  final ImageAIStyle imageAIStyle = ImageAIStyle.noStyle;
   bool run = false;
 
   Future<Uint8List> _generate(String query) async {
@@ -28,7 +29,6 @@ class _CreatePromptScreenState extends State<CreatePromptScreen> {
       apiKey: stability_ApiKey,
       imageAIStyle: imageAIStyle,
       prompt: query,
-      // cfgScale:
     );
     return image;
   }
@@ -207,6 +207,7 @@ class _CreatePromptScreenState extends State<CreatePromptScreen> {
                     // margin: const EdgeInsets.only(right: 20),
                     child: IconButton(
                         onPressed: (){
+                          FocusScope.of(context).unfocus();
                           String query = controller.text;
                           if (query.isNotEmpty) {
                             /// If the user input is not empty, set [run] to true to generate the image.
