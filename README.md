@@ -13,4 +13,10 @@
 - **Flutter:** A robust UI toolkit for developing visually engaging and responsive applications for mobile, web, and desktop platforms.  
 - **Stability.ai API:** A cutting-edge API for generating high-quality images from text prompts, leveraging advanced AI models.
 
+## Download the App
+
+Scan the QR code below to download the **Pixel-AI**:
+
+<img src="https://github.com/Sandip-Ash/Pixel-AI/blob/main/assets/images/PixelAI_QR.png" alt="QR Code" width="200" height="200">
+
 Unleash your imagination with **Pixel-AI**!  
